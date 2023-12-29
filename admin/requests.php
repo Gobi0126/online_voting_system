@@ -130,7 +130,7 @@ only screen and (max-width: 760px),
   <body>
     <?php include 'header.php';?>
     <?php
-      $conn = mysqli_connect('localhost','root','Gobi@1234','voting') or die("Connection failed:".mysqli_connect_error());
+      $conn = mysqli_connect('localhost','root','db_password','voting') or die("Connection failed:".mysqli_connect_error());
       require_once('../dbConnect.php');
 
       $sql="SELECT * FROM candidates_request;";
@@ -143,7 +143,7 @@ only screen and (max-width: 760px),
           reject();
       }
       function approve() {
-        $conn= mysqli_connect('localhost','root','Gobi@1234','voting') or die("Connection failed:" .mysqli_connect_error());
+        $conn= mysqli_connect('localhost','root','db_password','voting') or die("Connection failed:" .mysqli_connect_error());
         $regno1=$_POST['id'];
         $sql="SELECT * FROM candidates_request";
       $query=mysqli_query($conn,$sql);     
@@ -165,7 +165,7 @@ only screen and (max-width: 760px),
         <?php
       }
       function reject() {
-        $conn= mysqli_connect('localhost','root','Gobi@1234','voting') or die("Connection failed:" .mysqli_connect_error());
+        $conn= mysqli_connect('localhost','root','db_password','voting') or die("Connection failed:" .mysqli_connect_error());
         $regno1=$_POST['id'];
         $sql="SELECT * FROM candidates_request;";
         $query=mysqli_query($conn,$sql); 
