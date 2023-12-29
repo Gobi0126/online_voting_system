@@ -2,7 +2,7 @@
 
 $dsn = "mysql:host=localhost;dbname=voting";
 $user = "root";
-$pass = "Gobi@1234";
+$pass = "#yourpassword";
 $option = [PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION,PDO::FETCH_ASSOC];
 
 
