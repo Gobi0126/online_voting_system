@@ -63,12 +63,12 @@
           $mail->isSMTP();
           $mail->Host = 'smtp.gmail.com';
           $mail->SMTPAuth = true;
-          $mail->Username = 'gobiv.21cse@kongu.edu'; 
-          $mail->Password = 'Gobi@1234'; 
+          $mail->Username = '#your_gmail'; 
+          $mail->Password = '#your_gmail_password'; 
           $mail->SMTPSecure = 'tls'; 
           $mail->Port = 587; 
           $mail->SMTPDebug = 2;
-          $mail->setFrom('gobiv.21cse@kongu.edu', 'Gobi');
+          $mail->setFrom('#your_gmail', '#your_name');
           $mail->addAddress($email, $name);
           $mail->Subject = 'Registration OTP';
           $mail->Body = 'Your OTP for registration is: ' . $otp;
