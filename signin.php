@@ -18,7 +18,7 @@
   echo "$username";
   $password = $_POST['password'];
   echo "$password";
-  $conn= mysqli_connect('localhost','root','Gobi@1234','voting') or die("Connection failed:" .mysqli_connect_error());
+  $conn= mysqli_connect('localhost','root','db_password','voting') or die("Connection failed:" .mysqli_connect_error());
   $sql= "SELECT * FROM users WHERE regno = '$username' AND password = '$password' ";
   $result = mysqli_query($conn,$sql);
   $check = mysqli_fetch_array($result);
