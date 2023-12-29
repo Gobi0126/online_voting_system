@@ -21,7 +21,7 @@
          $regno="";
           $phoneno="";
     if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST["submit"])) {
-      $conn= mysqli_connect('localhost','root','Gobi@1234','voting') or die("Connection failed:" .mysqli_connect_error());
+      $conn= mysqli_connect('localhost','root','dbpassword','voting') or die("Connection failed:" .mysqli_connect_error());
       if(isset($_POST['name']) && isset($_POST['regno']) && isset($_POST['email']) && isset($_POST['phoneno']) && isset($_POST['password']) && isset($_POST['confirmpassword']) && isset($_POST['gender']) ) 
       {
         $name=$_POST['name'];
