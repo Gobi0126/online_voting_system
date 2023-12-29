@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <?php
-    $conn23= mysqli_connect('localhost','root','Gobi@1234','voting') or die("Connection failed:" .mysqli_connect_error());
+    $conn23= mysqli_connect('localhost','root','db_password','voting') or die("Connection failed:" .mysqli_connect_error());
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
