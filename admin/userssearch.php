@@ -200,7 +200,7 @@ td:before {
 <tbody>
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $conn = mysqli_connect("localhost", "root", "Gobi@1234", "voting");
+    $conn = mysqli_connect("localhost", "root", "db_password", "voting");
     $regno = $_POST['regno'];
 
     $sql = "SELECT name,regno, phoneno, email FROM users WHERE regno = '$regno';";
